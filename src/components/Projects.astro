@@ -15,75 +15,86 @@ import IconGitHub from './icons/IconGitHub.astro';
   </h2>
   <div>
     {
-      projects.map((project) => (
-        // <article class='grid lg:grid-cols-2 border-b-2 border-black last:border-b-0 lg:odd:[&>div]:even:order-last lg:odd:[&>div]:even:border-l-2 lg:odd:[&>div]:even:border-r-0'>
-        <article class='flex flex-col xl:flex-row border-b-2 border-black last:border-b-0'>
-          <div class='xl:border-r-2 border-black'>
-            <div class='flex flex-col gap-5 py-10 px-3 md:px-5 lg:px-10 justify-between h-full'>
-              <div class='flex flex-col gap-4'>
-                <div class='flex items-center'>
-                  <a
-                    href={project.url.deploy}
-                    target='_blank'
-                    rel='noreferrer'
-                    class='group flex items-center gap-2 text-xl xl:text-2xl'
-                  >
-                    # {project.title}{' '}
-                    <IconArrowLink
-                      width={5}
-                      height={5}
-                      strokeWidth={2}
-                      classes={'group-hover:scale-110 transition-all'}
-                    />
-                  </a>
-                  <a
-                    href={project.url.github}
-                    target='_blank'
-                    rel='noreferrer'
-                    class='group px-2'
-                  >
-                    <IconGitHub
-                      width={5}
-                      height={5}
-                      strokeWidth={2}
-                      classes={'group-hover:scale-110 transition-all'}
-                    />
-                  </a>
-                </div>
-                {project.descriptions.map((desc) => (
-                  <p class='text-lg xl:text-xl'>{desc}</p>
-                ))}
-              </div>
-              <div>
-                <span class='text-lg xl:text-xl'>Desarrollado con:</span>
-                <ul class='flex flex-wrap gap-3 mt-3'>
-                  {project.technologies.map((tech) => (
-                    <li
-                      class={`text-lg border-2 border-black rounded-full px-4 py-1 ${
-                        bgColors[
-                          tech.color.toUpperCase() as keyof typeof bgColors
-                        ]
-                      }`}
+      projects.map((project, index) => {
+        const isOdd: boolean = index % 2 === 0;
+
+        return (
+          <article class='grid lg:grid-cols-2 border-b-2 border-black last:border-b-0'>
+            <div
+              class={`border-black ${
+                isOdd ? 'lg:border-r-2' : 'lg:order-last'
+              }`}
+            >
+              <div class='flex flex-col gap-5 py-10 px-3 md:px-5 lg:px-10 justify-between h-full'>
+                <div class='flex flex-col gap-4'>
+                  <div class='flex items-center'>
+                    <a
+                      href={project.url.deploy}
+                      target='_blank'
+                      rel='noreferrer'
+                      class='group flex items-center gap-2 text-xl xl:text-2xl'
                     >
-                      {tech.name}
-                    </li>
+                      # {project.title}{' '}
+                      <IconArrowLink
+                        width={5}
+                        height={5}
+                        strokeWidth={2}
+                        classes={'group-hover:scale-110 transition-all'}
+                      />
+                    </a>
+                    <a
+                      href={project.url.github}
+                      target='_blank'
+                      rel='noreferrer'
+                      class='group px-2'
+                    >
+                      <IconGitHub
+                        width={5}
+                        height={5}
+                        strokeWidth={2}
+                        classes={'group-hover:scale-110 transition-all'}
+                      />
+                    </a>
+                  </div>
+                  {project.descriptions.map((desc) => (
+                    <p class='text-lg xl:text-xl'>{desc}</p>
                   ))}
-                </ul>
+                </div>
+                <div>
+                  <span class='text-lg xl:text-xl'>Desarrollado con:</span>
+                  <ul class='flex flex-wrap gap-3 mt-3'>
+                    {project.technologies.map((tech) => (
+                      <li
+                        class={`text-lg border-2 border-black rounded-full px-4 py-1 ${
+                          bgColors[
+                            tech.color.toUpperCase() as keyof typeof bgColors
+                          ]
+                        }`}
+                      >
+                        {tech.name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <picture class='bg-gray-100 grid place-content-center border-t-2 xl:border-0 border-black'>
-            <a href={project.url.deploy} target='_blank' rel='noreferrer'>
-              <img
-                src={project.img.src}
-                alt={project.img.alt}
-                class='w-full h-full object-contain'
-                loading='lazy'
-              />
-            </a>
-          </picture>
-        </article>
-      ))
+            <picture
+              class={`bg-gray-100 border-black border-t-2 lg:border-t-0 ${
+                isOdd ? '' : 'lg:border-r-2'
+              }`}
+            >
+              <a href={project.url.deploy} target='_blank' rel='noreferrer'>
+                <img
+                  src={project.img.src}
+                  alt={project.img.alt}
+                  class='w-full h-full object-contain'
+                  loading='lazy'
+                />
+              </a>
+            </picture>
+          </article>
+        );
+      })
     }
   </div>
 </section>
