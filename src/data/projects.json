@@ -1,0 +1,56 @@
+[
+  {
+    "title": "BANKIT",
+    "descriptions": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime quod architecto quaerat praesentium natus iure soluta sit iste ratione.",
+      "Consectetur adipisicing elit. Officiis maxime quod architecto quaerat praesentium natus iure soluta sit iste ratione. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime quod architecto quaerat praesentium natus iure soluta sit iste ratione."
+    ],
+    "technologies": [
+      {
+        "name": "NEXT.js",
+        "color": "black"
+      },
+      {
+        "name": "REACT",
+        "color": "cyan"
+      },
+      {
+        "name": "FIREBASE",
+        "color": "yellow"
+      }
+    ],
+    "url": {
+      "deploy": "https://bankit.vercel.app/",
+      "github": "https://github.com/joaquinarias989/bankit"
+    },
+    "img": {
+      "src": "img/bankit-proyect.png",
+      "alt": "Pagina de Resumenes del sistema"
+    }
+  },
+  {
+    "title": "STREET WEAR Ecommerce",
+    "descriptions": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime quod architecto quaerat praesentium natus iure soluta sit iste ratione.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime quod architecto quaerat praesentium natus iure soluta sit iste ratione."
+    ],
+    "technologies": [
+      {
+        "name": "REACT",
+        "color": "cyan"
+      },
+      {
+        "name": "FIREBASE",
+        "color": "yellow"
+      }
+    ],
+    "url": {
+      "deploy": "https://street-wear-react.vercel.app/",
+      "github": "https://github.com/joaquinarias989/react-31200"
+    },
+    "img": {
+      "src": "img/street-wear-proyect.png",
+      "alt": "Pagina de Productos del sitio web"
+    }
+  }
+]
