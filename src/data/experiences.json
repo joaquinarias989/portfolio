@@ -1,0 +1,35 @@
+[
+  {
+    "company": "BIOSOFT ONLINE S.R.L.",
+    "img": {
+      "src": "img/logo-biosoft.png",
+      "alt": "Logo de la empresa Biosoft Online"
+    },
+    "job": "Desarrollador Full Stack .NET",
+    "date": "2021 - Actualidad",
+    "descriptions": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis perferendis aut odio accusamus eveniet aspernatur, aperiam dolorem neque laboriosam a recusandae earum non et quis praesentium nemo consequuntur magnam."
+    ],
+    "url": {
+      "web": "https://biosoft-online.netlify.app/"
+    },
+    "contact": {
+      "email": "",
+      "phone": ""
+    },
+    "contributions": [
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum error consequatur sequi accusamus necessitatibus saepe, harum, mollitia corporis, obcaecati nesciunt eos neque. Voluptatum, sequi? Saepe dicta alias neque culpa veritatis."
+    ],
+    "technologies": [
+      { "name": "C#", "color": "gray" },
+      { "name": ".NET", "color": "purple" },
+      { "name": "BLAZOR", "color": "green" },
+      { "name": "MAUI", "color": "white" },
+      { "name": "JavaScript", "color": "gray" },
+      { "name": "SQL Server", "color": "purple" },
+      { "name": "IIS", "color": "green" },
+      { "name": "GIT", "color": "white" },
+      { "name": "SCRUM", "color": "gray" }
+    ]
+  }
+]
