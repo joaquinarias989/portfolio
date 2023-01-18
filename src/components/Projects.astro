@@ -79,17 +79,31 @@ import IconGitHub from './icons/IconGitHub.astro';
               </div>
             </div>
             <picture
-              class={`bg-gray-100 border-black border-t-2 lg:border-t-0 ${
+              class={`grid place-content-center bg-gray-300 border-black border-t-2 lg:border-t-0 overflow-hidden p-3 md:p-5 ${
                 isOdd ? '' : 'lg:border-r-2'
               }`}
             >
-              <a href={project.url.deploy} target='_blank' rel='noreferrer'>
-                <img
-                  src={project.img.src}
-                  alt={project.img.alt}
-                  class='w-full h-full object-contain'
-                  loading='lazy'
-                />
+              <a
+                href={project.url.deploy}
+                target='_blank'
+                rel='noreferrer'
+                class='group border-2 border-transparent rounded-lg overflow-hidden block relative'
+              >
+                {project.imgs.map((img, indexImg) => {
+                  const isHidden: boolean = indexImg > 0;
+                  return (
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      class={`w-full h-full object-fill aspect-video transition-all duration-300 ${
+                        isHidden
+                          ? 'absolute inset-0 opacity-0 scale-50 skew-y-6 skew-x-12 group-hover:opacity-100 group-hover:scale-100 group-hover:skew-y-0 group-hover:skew-x-0'
+                          : 'group-hover:scale-50 group-hover:-skew-y-6 group-hover:-skew-x-12'
+                      }`}
+                      loading='lazy'
+                    />
+                  );
+                })}
               </a>
             </picture>
           </article>

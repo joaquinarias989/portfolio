@@ -23,10 +23,16 @@
       "deploy": "https://bankit.vercel.app/",
       "github": "https://github.com/joaquinarias989/bankit"
     },
-    "img": {
-      "src": "img/bankit-proyect.png",
-      "alt": "Pagina de Resumenes del sistema"
-    }
+    "imgs": [
+      {
+        "src": "img/bankit-proyect.png",
+        "alt": "Pagina de Resumenes del sistema"
+      },
+      {
+        "src": "img/bankit-proyect-2.png",
+        "alt": "Pagina de Resumenes del sistema"
+      }
+    ]
   },
   {
     "title": "STREET WEAR Ecommerce",
@@ -48,9 +54,15 @@
       "deploy": "https://street-wear-react.vercel.app/",
       "github": "https://github.com/joaquinarias989/react-31200"
     },
-    "img": {
-      "src": "img/street-wear-proyect.png",
-      "alt": "Pagina de Productos del sitio web"
-    }
+    "imgs": [
+      {
+        "src": "img/street-wear-proyect.png",
+        "alt": "Pagina de Productos del sitio web STREET WEAR"
+      },
+      {
+        "src": "img/street-wear-proyect-2.png",
+        "alt": "Pagina de Carrito de Compras del sitio web STREET WEAR"
+      }
+    ]
   }
 ]
