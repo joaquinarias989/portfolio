@@ -1,10 +1,21 @@
+---
+export interface Props {
+  width?: number;
+  height?: number;
+  strokeWidth?: number;
+  classes?: string;
+}
+
+const { width, height, strokeWidth, classes } = Astro.props;
+---
+
 <svg
   xmlns='http://www.w3.org/2000/svg'
   fill='none'
   viewBox='0 0 24 24'
-  stroke-width='1.5'
+  stroke-width={strokeWidth || 1.5}
   stroke='currentColor'
-  class='w-8 h-8'
+  class={`w-${width || 8} h-${height || 8} ${classes}`}
 >
   <path
     stroke-linecap='round'

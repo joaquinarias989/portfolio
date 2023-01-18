@@ -1,0 +1,63 @@
+---
+import IconArrowLeft from './icons/IconArrowLeft.astro';
+---
+
+<section
+  class='grid place-content-center md:grid-cols-2 gap-10 bg-stone-900 py-20 px-3 md:px-16 lg:px-48 lg:py-28'
+>
+  <div class='grid place-content-center'>
+    <h2
+      class='text-3xl md:text-4xl xl:text-5xl md:text-end uppercase font-bold xl:leading-[1.2] text-green-300'
+    >
+      # CONTACTAME, <span class='block'>DEJA TUS DATOS O ENVÍA UN MENSAJE</span>
+    </h2>
+  </div>
+  <form class='grid gap-5'>
+    <div>
+      <label for='name' class='block text-lg text-white uppercase'
+        >Nombre y/o Empresa</label
+      >
+      <input
+        type='text'
+        maxlength='200'
+        name='name'
+        id='name'
+        placeholder='EMPRESA S.A.'
+        class='border-2 border-white py-3 px-4 w-full mt-2 text-lg bg-transparent hover:border-purple-300 focus:outline-none focus:border-purple-300 transition-all text-white'
+        required
+      />
+    </div>
+    <div>
+      <label for='email' class='block text-lg text-white uppercase'
+        >Correo de Contacto</label
+      >
+      <input
+        type='email'
+        maxlength='200'
+        name='email'
+        id='email'
+        placeholder='empresa@gmail.com'
+        class='border-2 border-white py-3 px-4 w-full mt-2 text-lg bg-transparent hover:border-purple-300 focus:outline-none focus:border-purple-300 transition-all text-white'
+        required
+      />
+    </div>
+    <div>
+      <label for='message' class='block text-lg text-white uppercase'
+        >Mensaje</label
+      >
+      <textarea
+        name='message'
+        id='message'
+        placeholder='[...]'
+        rows='3'
+        class='border-2 border-white py-3 px-4 w-full mt-2 text-lg bg-transparent hover:border-purple-300 focus:outline-none focus:border-purple-300 transition-all resize-none text-white'
+      ></textarea>
+    </div>
+    <button
+      type='submit'
+      class='group flex items-center justify-center gap-2 p-5 text-2xl text-center cursor-pointer bg-purple-300 hover:bg-purple-400 transition-all'
+      ><span class='group-hover:scale-105 transition-all'>ENVIAR CONTACTO</span
+      ><IconArrowLeft classes={'group-hover:scale-105 transition-all'} />
+    </button>
+  </form>
+</section>
