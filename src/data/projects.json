@@ -64,5 +64,36 @@
         "alt": "Pagina de Carrito de Compras del sitio web STREET WEAR"
       }
     ]
+  },
+  {
+    "title": "Adivina la Celebridad",
+    "descriptions": [
+      "Proyecto realizado para la Hackaton del 03/07/2023 organizada por @midudev y @cloudinary. El objetivo era crear una aplicación que utilizara algún servicio de Cloudinary.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime quod architecto quaerat praesentium natus iure soluta sit iste ratione."
+    ],
+    "technologies": [
+      {
+        "name": "ASTRO",
+        "color": "orange"
+      },
+      {
+        "name": "CLOUDINARY",
+        "color": "blue"
+      }
+    ],
+    "url": {
+      "deploy": "https://adivina-la-celebridad.vercel.app/",
+      "github": "https://github.com/joaquinarias989/guess-the-celebrity"
+    },
+    "imgs": [
+      {
+        "src": "img/guess-the-celebrity.png",
+        "alt": "Pagina de Productos del sitio web STREET WEAR"
+      },
+      {
+        "src": "img/guess-the-celebrity-2.png",
+        "alt": "Pagina de Carrito de Compras del sitio web STREET WEAR"
+      }
+    ]
   }
 ]

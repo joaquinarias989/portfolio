@@ -6,6 +6,8 @@ export const bgColors = {
   YELLOW: 'bg-yellow-300',
   WHITE: 'bg-white',
   BLACK: 'bg-black text-white',
+  ORANGE: 'bg-orange',
+  INDIGO: 'bg-indigo',
 };
 
 export const getRandomBgColor = (): string => {
