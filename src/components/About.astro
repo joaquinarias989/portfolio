@@ -1,35 +1,31 @@
 ---
 import IconGitHub from './icons/IconGitHub.astro';
+import Paragraph from './ui/Paragraph.astro';
+import SectionTitle from './ui/SectionTitle.astro';
 ---
 
 <section class='border-y-2 border-black'>
-  <h2
-    class='text-3xl md:text-4xl xl:text-5xl uppercase border-b-2 border-black font-bold xl:leading-[1.2] px-3 py-3 md:px-5 lg:px-10'
-  >
-    # SOBRE MÍ<span class='italic font-light text-lg md:text-xl'>
-      conocimiento</span
-    >
-  </h2>
+  <SectionTitle title='Sobre mí' subtitle='conocimiento' />
+
   <article>
-    <div class='grid md:grid-cols-10 border-b-2 border-black'>
+    <div class='grid md:grid-cols-10'>
       <div class='md:col-span-6 md:border-r-2 border-black'>
         <div
-          class='flex flex-col justify-between h-full py-10 px-3 md:px-5 lg:px-10 text-lg xl:text-xl'
+          class='flex flex-col justify-between h-full py-10 px-3 md:px-5 lg:px-10 text-lg xl:text-xl gap-5'
         >
           <div class='space-y-4'>
-            <span class=''>Autodidacta.</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium dicta voluptas totam nihil provident ut voluptate.
-              Fugit corporis praesentium dolores.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur praesentium.</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempore facere voluptatum, amet vero molestiae.
-            </p>
+            <span>Autodidacta.</span>
+            <Paragraph
+              text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dicta voluptas totam nihil provident ut voluptate. Fugit corporis praesentium dolores.'
+            />
+            <Paragraph
+              text='Lorem ipsum dolor sit amet consectetur praesentium.'
+            />
+            <Paragraph
+              text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur tempore facere voluptatum, amet vero molestiae.'
+            />
           </div>
-          <div class='space-y-3'>
+          <div class='space-y-3 mt-5'>
             <div class='flex gap-3 items-center'>
               <div
                 class='p-1 border-4 border-purple-300 bg-black text-purple-300'
@@ -91,15 +87,12 @@ import IconGitHub from './icons/IconGitHub.astro';
           </div>
         </div>
       </div>
-      <picture
-        class='md:col-span-4 border-t-2 border-black md:border-0 max-h-[15rem] lg:max-h-[30rem]'
-      >
+      <picture class='md:col-span-4 border-t-2 border-black md:border-0'>
         <img
           src='https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=699&q=80'
-          class='w-full h-full object-cover'
+          class='w-full h-full max-h-[15rem] md:max-h-full lg:max-h-[30rem] object-cover'
         />
       </picture>
     </div>
-    <div>C# .NET REACT NEXT.JS ETC (tecnologias cayendo tipo BADGE)</div>
   </article>
 </section>

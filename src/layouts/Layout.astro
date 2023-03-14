@@ -9,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='es-ar'>
+<html lang='es-ar' class='md:px-10'>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
@@ -18,7 +18,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class='container min-h-screen overflow-x-hidden mx-auto border-2 border-black bg-gray-50'
+    class='container xl:max-w-7xl min-h-screen overflow-x-hidden mx-auto border-2 border-black bg-gray-50 text-black'
   >
     <NavHeader />
     <slot />

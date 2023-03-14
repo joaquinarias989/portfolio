@@ -1,0 +1,9 @@
+---
+interface Props {
+  text: string;
+  classes?: string;
+}
+const { text, classes } = Astro.props;
+---
+
+<p class={`text-lg xl:text-xl ${classes != null ? classes : ''}`}>{text}</p>

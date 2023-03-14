@@ -1,16 +1,12 @@
 ---
 import experiences from '../data/experiences.json';
 import { bgColors } from '../helpers/colors';
+import Paragraph from './ui/Paragraph.astro';
+import SectionTitle from './ui/SectionTitle.astro';
 ---
 
 <section class='border-y-2 border-black'>
-  <h2
-    class='text-3xl md:text-4xl xl:text-5xl uppercase border-b-2 border-black font-bold xl:leading-[1.2] px-3 py-3 md:px-5 lg:px-10'
-  >
-    # EXPERIENCIA<span class='italic font-light text-lg md:text-xl'>
-      laboral</span
-    >
-  </h2>
+  <SectionTitle title='EXPERIENCIA' subtitle='LABORAL' />
   <div class='flex flex-col'>
     {
       experiences.map((exp) => (
@@ -28,7 +24,7 @@ import { bgColors } from '../helpers/colors';
                 </a>
               </div>
               <div class='flex flex-col'>
-                <a href={exp.img.src} target='_blank' rel='noopener noreferrer'>
+                <a href={exp.url.web} target='_blank' rel='noopener noreferrer'>
                   <span class='text-xl xl:text-2xl font-bold'>
                     # {exp.company}
                   </span>
@@ -38,7 +34,7 @@ import { bgColors } from '../helpers/colors';
               </div>
             </div>
             {exp.descriptions.map((desc) => (
-              <p class='text-lg xl:text-xl'>{desc}</p>
+              <Paragraph text={desc} />
             ))}
 
             <div class='flex gap-3 items-center'>
@@ -74,7 +70,7 @@ import { bgColors } from '../helpers/colors';
             <div class='py-10 px-3 md:px-5 lg:px-10'>
               <span class='text-xl xl:text-2xl font-bold'># APORTE</span>
               {exp.contributions.map((contribution) => (
-                <p class='text-lg xl:text-xl mt-2'>{contribution}</p>
+                <Paragraph text={contribution} classes={'mt-2'} />
               ))}
             </div>
             <div class='border-t-2 border-black py-10 px-3 md:px-5 lg:px-10'>
